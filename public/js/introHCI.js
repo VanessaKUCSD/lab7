@@ -10,4 +10,15 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$(".likeBtn").click(btnClick);
+}
+
+
+function btnClick(e) {
+	// prevent the page from reloading     
+	e.preventDefault();
+
+	console.log("like button click");
+	
+	ga("send", "event", "like", "click");
 }
